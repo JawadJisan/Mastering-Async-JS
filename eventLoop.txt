@@ -1,0 +1,5 @@
+Event Loop
+- Call Stack: all JS codes or functions are executed (FIFO)
+- Web APIs: Browser-provided features(setTimeout, fetch, DOM events, etc.)
+- Callback Queue: Holds  callback waiting to be executed
+- Event Loop: constantly check if call stack is empty, then moves callback from queue to stack (LIFO)

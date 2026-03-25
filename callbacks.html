@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        Callback
+        - A function passed as an argument to another function, to be executed later.
+        */
+      function greet(name, callback) {
+        console.log(`Hello ${name}`);
+        callback();
+      }
+      greet("Jawad", function () {
+        console.log("Callback Executed");
+      });
+
+      /* 
+      Async Callbacks
+      */
+
+      /* 
+      Callback Hell
+      */
+      setTimeout(() => {
+        console.log("Step 1");
+        setTimeout(() => {
+          console.log("Setp 2");
+          setTimeout(() => {
+            console.log("Step 3");
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    </script>
+  </body>
+</html>
